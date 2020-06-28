@@ -23,6 +23,8 @@ body {
     align-items: center;
 }
 
+/* ########### LOGIN PAGE ############# */
+
 .login-container {
     margin: auto;
     display: flex;
@@ -30,7 +32,7 @@ body {
     align-items: center;
 }
 
-.login {
+.login-form {
     margin: auto;
     display: flex;
     flex-direction: column;
