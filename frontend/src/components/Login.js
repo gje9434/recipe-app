@@ -2,12 +2,12 @@ import React, { useState, Fragment } from "react";
 
 function Login() {
     return (
-        <div className="login-container">
-            <form className="login-form">
+        <div className="container centered">
+            <form className="standard-user-form">
                 <h2>Login</h2>
-                <input type="text" placeholder="Username"/>
-                <input type="password" placeholder="Password"/>
-                <button>Log In</button>
+                <input className="standard-input" type="text" placeholder="Username"/>
+                <input className="standard-input" type="password" placeholder="Password"/>
+                <button className="standard-button">Log In</button>
                 <a href="">Lost your password?</a>
             </form>
             <span className="register-text">Don't have an account?

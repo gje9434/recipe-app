@@ -3,8 +3,8 @@
     --darker-blue: #2982bd;
     --input-bg-color: rgb(238, 236, 236);
     --text-grey: grey;
+    --main-orange: #ffa931;
 }
-
 
 body {
     margin: 0px;
@@ -23,17 +23,63 @@ body {
     align-items: center;
 }
 
-/* ########### LOGIN PAGE ############# */
-
-.login-container {
-    margin: auto;
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.login-form {
-    margin: auto;
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+hr {
+    width: 100%;
+    background-color: rgb(212, 211, 211);
+    height: 2px;
+    border-style: none;
+}
+
+/* ########### NAVBAR ############# */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
+    margin-bottom: 2vh;
+}
+
+.nav h1 {
+    margin: 0px 0px 0px 20vw;
+    font-size: 1.75em;
+}
+
+.navbar-list {
+    list-style: none;
+    display: inline-flex;
+    margin-right: 20vw;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: var(--main-blue);
+    margin-left: 3.5vw;
+    transition: 0.3s;
+}
+
+.navbar-list li a:hover {
+    text-emphasis: bold;
+    color: grey;
+}
+
+/* STANDARD USER INPUT FORM TO BE USED ACROSS SITE */
+
+.standard-user-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +92,7 @@ body {
     margin-bottom: 2.5vh;
 }
 
-.login input {
+.standard-input {
     width: 80%;
     margin-bottom: 2vh;
     height: 4.5vh;
@@ -57,11 +103,11 @@ body {
     text-indent: 5px;
 }
 
-.login input:focus {
+.standard-input:focus {
     outline: none;
 }
 
-.login button {
+.standard-button {
     background-color: var(--main-blue);
     color: white;
     border-style: none;
@@ -76,20 +122,22 @@ body {
     align-items: center;
 }
 
-.login button:hover {
+.standard-button:hover {
     background-color: var(--darker-blue);
 }
 
-.login a {
+.standard-user-form a {
     font-size: 0.65em;
     color: var(--text-grey);
     text-decoration: none;
     margin-bottom: 20px;
 }
 
-.login a:hover {
+.standard-user-form a:hover {
     text-decoration: underline;
 }
+
+/* ######### Register Text + Links ######## */
 
 .register-text {
     font-size: 0.55em;
@@ -103,3 +151,118 @@ body {
 .register-link:hover {
     text-decoration: none;
 }
+
+/* ########### ADD RECIPE ############# */
+
+.recipe-list {
+    list-style: none;
+    font-size: 0.65em;
+    display: flex;
+    flex-direction: row;
+    margin: 1vh 0px 1vh 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.recipe-list li {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.method-para {
+    max-width: 100%;
+}
+
+.add-ingredient-btn {
+    font-size: 0.5em;
+}
+
+
+/* ########### ADD CATEGORY ############# */
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2vh 0px 0px 0px;
+    padding: 0px;
+    width: 15vw;
+    list-style: none;
+}
+
+.category-add-form {
+    display: flex;
+}
+
+.category-add-form:focus {
+    outline: none;
+}
+
+.category-item {
+    background-color: var(--main-orange);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    font-size: 0.8em;
+    width: 50%;
+    margin-bottom: 1vh;
+}
+
+.category-item span {
+    color: red;
+    font-size: 0.8em;
+    margin-left: 0.5vw;
+    margin-right: 0.25vw;
+    border-left: 1px solid var(--main-blue);
+    padding-left: 4px;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #### Generic styling attributes #### */
+
+.standard-width {
+    width: 60%;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.center-content {
+    justify-content: center;
+    align-items: center;
+}
+
+.centered {
+    margin: auto;
+}
+
+.blue-text {
+    color: var(--main-blue);
+}
+
+.orange-bg {
+    background-color: var(--main-orange);
+}
+
+.orange-text {
+    color: var(--main-orange);
+}
+
+.no-vertical-margin {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
