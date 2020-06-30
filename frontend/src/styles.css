@@ -154,7 +154,11 @@ hr {
 
 /* ########### ADD RECIPE ############# */
 
-.recipe-list {
+.add-recipe-title {
+    color: var(--main-blue);
+}
+
+.ingredients-list {
     list-style: none;
     font-size: 0.65em;
     display: flex;
@@ -164,7 +168,29 @@ hr {
     flex-wrap: wrap;
 }
 
-.recipe-list li {
+.methods-list {
+    list-style: none;
+    font-size: 0.65em;
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 0px 1vh 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.add-ingredient-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.add-method-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.ingredients-list li {
     margin-left: 1vw;
     margin-right: 1vw;
 }
@@ -175,6 +201,12 @@ hr {
 
 .add-ingredient-btn {
     font-size: 0.5em;
+}
+
+.new-recipe-title {
+    color: var(--main-orange);
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 
@@ -243,22 +275,8 @@ hr {
 .centered {
     margin: auto;
 }
-
-.blue-text {
-    color: var(--main-blue);
-}
-
 .orange-bg {
     background-color: var(--main-orange);
-}
-
-.orange-text {
-    color: var(--main-orange);
-}
-
-.no-vertical-margin {
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 .space-between {
