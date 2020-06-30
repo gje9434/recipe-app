@@ -178,6 +178,16 @@ hr {
     flex-wrap: wrap;
 }
 
+.ingredients-list li {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    cursor: default;
+}
+
+.methods-list li {
+    cursor: default;
+}
+
 .add-ingredient-container {
     display: flex;
     flex-direction: row;
@@ -188,11 +198,6 @@ hr {
     display: flex;
     flex-direction: row;
     width: 80%;
-}
-
-.ingredients-list li {
-    margin-left: 1vw;
-    margin-right: 1vw;
 }
 
 .method-para {
