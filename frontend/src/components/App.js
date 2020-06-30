@@ -5,8 +5,10 @@ import Login from "./Login";
 import Register from "./Register";
 import NewRecipeInput from "./NewRecipeInput";
 import CategoryInput from "./CategoryInput";
-import CategoryList from "./CategoryList";
 import {CategoriesContext} from "../CategoriesContext";
+import Recover from "./Recover";
+import RecipesList from "./RecipesList";
+
 
 
 function App() {
@@ -17,14 +19,15 @@ function App() {
         <Router>
             <Nav />
             <CategoriesContext.Provider value={{categories, setCategories}}>
+            <Route path="/home" exact component={RecipesList} />
             <div className="content standard-width">
                 <Route path="/add" exact component={NewRecipeInput} />
                 <div className="container">
                     <Route path="/add" exact component={CategoryInput} />
-                    <Route path="/add" exact component={CategoryList} />
                 </div>
             </div>
             </CategoriesContext.Provider>
+                <Route path="/recover" component={Recover} />
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
         </Router>
