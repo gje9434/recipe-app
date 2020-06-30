@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { CategoriesContext } from "../CategoriesContext";
+import CategoryList from "./CategoryList";
 
 function CategoryInput() {
 
@@ -17,12 +18,16 @@ function CategoryInput() {
     }
 
     return (
-        <form action="" className="category-add-form" onSubmit={handleSubmit}>
-            <input type="text" value={category} className="category-add-input" placeholder="New Category"
+        <div className="container">
+        <form className="standard-user-form" onSubmit={handleSubmit}>
+            <h2 className="add-recipe-title">Categories</h2>
+            <input type="text" value={category} className="standard-input" placeholder="New Category"
                 onChange={handleChange}
-                onSubmit={handleSubmit}
             />
+            <CategoryList />
         </form>
+        </div>
+        
     )
 }
 

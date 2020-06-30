@@ -14,8 +14,8 @@ function CategoryItem(props) {
     }
 
     return (
-    <li className="category-item">{props.name}
-        <span onClick={() => {
+    <li className="category-list-item">{props.name}
+        <span className="category-list-item-delete" onClick={() => {
             return deleteCategory(props.name)
         }}>
         X</span>
