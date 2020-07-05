@@ -137,6 +137,7 @@ hr {
     color: var(--text-grey);
     text-decoration: none;
     margin-bottom: 20px;
+    margin-top: 1.5vh;
 }
 
 .standard-user-form a:hover {
@@ -279,6 +280,13 @@ hr {
 
 .full-width {
     width: 70%;
+}
+
+.err-msg {
+    color: red;
+    margin: 0px;
+    margin-top: 1vh;
+    font-size: 0.6em;
 }
 
 .row {

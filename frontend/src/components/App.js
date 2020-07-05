@@ -19,7 +19,7 @@ function App() {
         <Router>
             <Nav />
             <CategoriesContext.Provider value={{categories, setCategories}}>
-            <Route path="/home" exact component={RecipesList} />
+            <Route path="/" exact component={RecipesList} />
             <div className="content standard-width">
                 <Route path="/add" exact component={NewRecipeInput} />
                 <div className="container">
@@ -27,9 +27,9 @@ function App() {
                 </div>
             </div>
             </CategoriesContext.Provider>
-                <Route path="/recover" component={Recover} />
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
+                <Route path="/recover" exact component={Recover} />
+                <Route path="/login" exact component={Login} />
+                <Route path="/register" exact component={Register} />
         </Router>
     )
 }
