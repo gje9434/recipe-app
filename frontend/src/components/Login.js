@@ -42,13 +42,13 @@ function Login() {
     }
         
     return (
-        <div className="container">
+        <div className="container centered">
             <form className="standard-user-form">
                 <h2>Login</h2>
                 <input onChange={handleChange} className="standard-input" reaquired name="username" type="text" placeholder="Username"/>
                 <input onChange={handleChange} className="standard-input" required name="password" type="password" placeholder="Password"/>
                 <button onClick={handleSubmit} className="standard-button">Log In</button>
-                <p className="err-msg">Invalid Credentials</p>
+                <p className="err-msg" style={{display:errorDisplay}}>Invalid Credentials</p>
                 <a href="/recover">Lost your password?</a>
             </form>
             <span className="register-text">Don't have an account?

@@ -1,4 +1,5 @@
 const pool = require("./db");
+const bcrypt = require("bcrypt");
 
 function doesUserExist(rows) {
     return new Promise((resolve, reject) => {
@@ -10,21 +11,14 @@ function doesUserExist(rows) {
     })
 }
 
-function doesPasswordMatch(userPword, dbPword) {
-    return new Promise((resolve, reject) => {
-        if(userPword == dbPword) {
-            resolve("Passwords match")
-        } else {
-            reject("Incorrect password")
-        }
-    })
-}
-
 async function loginQuery(user) {
     try {
         const { rows } = await pool.query("SELECT * FROM users WHERE username = $1", [user.username]);
         await doesUserExist(rows);
-        await doesPasswordMatch(user.password, rows[0].password);
+        const res = await bcrypt.compare(user.password, rows[0].password);
+        if(res == false) {
+            throw Error("Passwords don't match")
+        }
     } catch(err) {
         return Promise.reject(err);
     }
